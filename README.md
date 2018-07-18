@@ -17,7 +17,11 @@
 * Mockito
 
 # Design
-The project is self explainatory and follows standard as per development process. Eventually every maven module can be made as SpringBoot Application enabled.
+* The project is self explainatory and follows standard as per development process. 
+* Eventually every maven module can be made as SpringBoot Application enabled.
+* A Scheduler run every 5 seconds to clean (transactions above 60 seconds timestamp) the Inmemory store to keep it optimum.
+
+
 
 # Code Completion/Testing Criteria
 
