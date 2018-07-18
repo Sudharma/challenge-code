@@ -17,9 +17,8 @@ import java.util.Date;
 @RestController
 public class CustomizedResponseEntityExceptionHandler extends ResponseEntityExceptionHandler {
 
-    @ExceptionHandler(Exception.class)
     protected ResponseEntity<ErrorDetails> handleAllExceptions(MethodArgumentNotValidException ex,
-                                                                  HttpHeaders headers, HttpStatus status, WebRequest request) {
+                                                               HttpHeaders headers, HttpStatus status, WebRequest request) {
         ErrorDetails errorDetails = new ErrorDetails(new Date(), ex.getMessage(),
                 ex.getBindingResult().toString());
         return new ResponseEntity(errorDetails, HttpStatus.BAD_REQUEST);

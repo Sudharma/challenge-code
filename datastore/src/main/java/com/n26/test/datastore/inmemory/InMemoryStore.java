@@ -23,7 +23,7 @@ public class InMemoryStore extends ConcurrentHashMap<Date, Double> {
     /**
      * Static initializers are  executed sequentially hence below line is thread safe
      */
-    private static volatile InMemoryStore store = new InMemoryStore();
+    private static InMemoryStore store = new InMemoryStore();
 
     /**
      * Get Instance of {@link InMemoryStore}
