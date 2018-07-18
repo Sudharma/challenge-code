@@ -12,6 +12,9 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
+/**
+ * Service Implementing @{@link StatisticService}
+ */
 @Service
 public class StatisticsServiceImpl implements StatisticService {
 
@@ -20,6 +23,10 @@ public class StatisticsServiceImpl implements StatisticService {
     @Autowired
     DataStoreService storeService;
 
+    /***
+     * Get the Statistics for past 60 seconds of timestamp from the time the endpoint is called
+     * @return
+     */
     @Override
     public Statistics getStatistics() {
         List<Double> amounts = storeService.getTransactionAmount().get();
@@ -36,6 +43,10 @@ public class StatisticsServiceImpl implements StatisticService {
     }
 }
 
+/**
+ * Helper class which calculates the aggregate values.
+ * @TODO This could be moved to a util or helper package.
+ */
 final class StatisticsHelper {
 
     static Double sum(List<Double> amounts) {

@@ -23,6 +23,12 @@ public class TransactionServiceImpl implements TransactionService {
     @Autowired
     DataStoreService service;
 
+    /***
+     * Create Transaction
+     * @param amount type double
+     * @param timestamp type unix epoch in milli sec
+     * @return http status code in integer format.
+     */
     @Override
     public int createTransaction(double amount, long timestamp) {
         Date date = service.create(timestamp, amount);

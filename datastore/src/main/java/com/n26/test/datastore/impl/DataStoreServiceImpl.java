@@ -13,11 +13,21 @@ import java.util.function.Function;
 import java.util.function.ToDoubleFunction;
 import java.util.stream.Collectors;
 
+/**
+ * Implementation of @{@link DataStoreService}. <p>
+ *
+ */
 @Service
 public class DataStoreServiceImpl implements DataStoreService {
 
     private static final Logger logger = LoggerFactory.getLogger(DataStoreServiceImpl.class);
 
+    /***
+     * Create new entry in Datastore
+     * @param timestamp timestamp of event
+     * @param amount amount
+     * @return
+     */
     @Override
     public Date create(long timestamp, double amount) {
         Date date = Date.from(Instant.ofEpochMilli(timestamp));
@@ -25,6 +35,10 @@ public class DataStoreServiceImpl implements DataStoreService {
         return date;
     }
 
+    /**
+     * Return the Transaction Amount for the timestamp not more than 60 seconds
+     * @return transaction amount
+     */
     @Override
     public Optional<List<Double>> getTransactionAmount() {
         final Instant now = Instant.now();

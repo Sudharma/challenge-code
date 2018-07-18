@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
 
+/**
+ * Controller for Transaction
+ */
 @RestController
 public class TransactionController {
 
@@ -21,6 +24,14 @@ public class TransactionController {
     @Autowired
     TransactionService service;
 
+    /**
+     * Post Transaction with @{@link Transaction} as request body. <p>
+     * Should return 201 code if transaction is less than 60 seconds. 204 if more
+     * than 60 seconds.
+     *
+     * @param transactionRequest
+     * @return No Content and only http status code
+     */
     @PostMapping("/transactions")
     public ResponseEntity<?> createTransactions(@Valid @RequestBody Transaction transactionRequest) {
         logger.info("Posting Transaction Started");

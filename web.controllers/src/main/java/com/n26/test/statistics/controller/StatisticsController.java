@@ -20,10 +20,12 @@ public class StatisticsController {
     @Autowired
     StatisticService service;
 
-
+    /***
+     *  Controller mapping to get Statistics.
+     * @return @{@link Statistics}
+     */
     @RequestMapping(value = "/statistics", method = RequestMethod.GET, produces = {"application/json"})
     @ResponseBody
-
     public ResponseEntity<Statistics> getStatistics() {
         logger.info("Retrieving Statistics...");
         Statistics statistics = service.getStatistics();

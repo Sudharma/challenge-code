@@ -2,7 +2,9 @@ package com.n26.test.statistics.service.api;
 
 import com.n26.test.rest.model.Statistics;
 
-
+/***
+ * Service for Statistics
+ */
 public interface StatisticService {
 
     /***

@@ -5,6 +5,9 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
+/***
+ * Service to Access InMemory DataStore.
+ */
 public interface DataStoreService {
 
     Date create(long timestamp, double amount);

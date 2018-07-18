@@ -1,8 +1,7 @@
 package com.n26.test.rest.model;
 
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotNull;
 
 /**
@@ -13,24 +12,24 @@ public class Transaction {
 
 
     @NotNull(message = "missing field amount")
-    private double amount;
+    private Double amount;
 
     @NotNull(message = "missing field timestamp")
-    private long timestamp;
+    private Long timestamp;
 
-    public double getAmount() {
+    public Double getAmount() {
         return amount;
     }
 
-    public void setAmount(double amount) {
+    public void setAmount(Double amount) {
         this.amount = amount;
     }
 
-    public long getTimestamp() {
+    public Long getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(long timestamp) {
+    public void setTimestamp(Long timestamp) {
         this.timestamp = timestamp;
     }
 }

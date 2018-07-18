@@ -5,6 +5,9 @@ package com.n26.test.rest.model;
  */
 public class Statistics {
 
+    /**
+     * Shortcircuit for no values.
+     */
     public Statistics() {}
 
     public Statistics(double sum, double avg, double max, double min, long count) {

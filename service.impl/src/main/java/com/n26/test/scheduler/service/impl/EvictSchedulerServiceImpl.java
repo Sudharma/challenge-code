@@ -14,14 +14,20 @@ import java.util.Date;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * Service Implementing @{@link EvictSchedulerService}
+ */
 @Service
 public class EvictSchedulerServiceImpl implements EvictSchedulerService {
 
     private static final Logger logger = LoggerFactory.getLogger(EvictSchedulerServiceImpl.class);
 
-
+    /***
+     * Evict old entries. Check is done for every 5 seconds
+     * @return
+     */
     @Override
-    @Scheduled(fixedRate = 10000)
+    @Scheduled(fixedRate = 5000)
     public boolean evictOldEntries() {
         logger.debug("Cleaning datastore for optimum usage..");
         Instant now = Instant.now();
