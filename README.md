@@ -22,7 +22,7 @@ The project is self explainatory and follows standard as per development process
 # Code Completion/Testing Criteria
 
 * Unit Tested
-* Basic Validations which returns 400 Bad Request as Status codes
+* Basic Validations which returns 400 Bad Request as Status codes and verbose message. Note that this is just vanilla error message and not meant be considered as for production level code.
 
 
 
