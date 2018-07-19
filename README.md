@@ -1,6 +1,6 @@
 
 # Problem Statement
-The transactions are posted in unix timestamp in epoch millis with some amount at endpoint **/transactions**. The timestamp can be as old as possible.The statistics are fetched for timestamp with last 60 seconds from the current time of the endpoint **/statistics** called.
+The transactions are posted in unix timestamp in epoch millis with some amount at endpoint **/transactions**. The timestamp can be as old as possible but valid one if it is not old than 60 seconds from current time. For older transactions HTTP response code is 204 otherwise 201. The statistics are fetched for timestamp with last 60 seconds from the current time of the endpoint **/statistics** called.
 # Prerequisite
 
 * Java-8
