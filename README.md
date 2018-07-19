@@ -30,6 +30,7 @@ The transactions are posted in unix timestamp in epoch millis with some amount a
 
 * Unit Tested
 * Basic Validations which returns 400 Bad Request as Status codes and verbose message. Note that this is just vanilla error message and not meant be considered as for production level code.
+* ConsoleAppender is the default logging. Basic information is set with logging!
 
 
 
